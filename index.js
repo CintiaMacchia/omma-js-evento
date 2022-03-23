@@ -168,12 +168,11 @@ function exibirReceitasJs() {
     let htmlReceitas = '';
 
     for (let index = 0; index < listaDeReceitas.length; index++) {
-        htmlReceitas += `<article class="card"> <
-        h2 > $ { listaDeReceitas[index].titulo } </h2> 
-       <small > Dificuldade: $ { listaDeReceitas[index].dificuldade } </small> 
-       < p > $ { listaDeReceitas[index].preparo } </p>  
-        
-            </article>`;
+        htmlReceitas += `<article class="card"> 
+       <h2>${ listaDeReceitas[index].titulo}</h2> 
+       <small>Dificuldade:${ listaDeReceitas[index].dificuldade}</small> 
+       <p>${listaDeReceitas[index].preparo}</p>  
+                    </article>`;
 
 
 
