@@ -141,30 +141,33 @@ const buscarReceita = (termoBuscado) => {
 const btnEnviar = document.querySelector('#btnEnviar');
 
 btnEnviar.onclick = (evento) => {
-        //previne evento padrão
-        evento.preventDefault();
+    //previne evento padrão
+    evento.preventDefault();
 
-        let inputTitulo = document.querySelector('#titulo');
-        let inputDificuldade = document.querySelector('#dificuldade');
-        let inputIngredientes = document.querySelector('#ingredientes');
-        let inputPreparo = document.querySelector('#preparo');
-        let inputLink = document.querySelector('#link');
-        let inputVegano = document.querySelector('input[name="vegano"]:checked');
+    let inputTitulo = document.querySelector('#titulo');
+    let inputDificuldade = document.querySelector('#dificuldade');
+    let inputIngredientes = document.querySelector('#ingredientes');
+    let inputPreparo = document.querySelector('#preparo');
+    let inputLink = document.querySelector('#link');
+    let inputVegano = document.querySelector('input[name="vegano"]:checked');
 
-        let novaReceitaJs = {
-            id: listaDeReceitas.length,
-            titulo: inputTitulo.value,
-            dificuldade: inputDificuldade.value,
-            ingredientes: inputIngredientes.value.split(','),
-            preparo: inputPreparo.value,
-            link: inputLink.value,
-            //vagano: inputVegano.value ? inputVegano: "não"
-        }
-        console.log(novaReceitaJs);
-        listaDeReceitas.push(novaReceitaJs);
+    let novaReceita = {
+        id: listaDeReceitas.length,
+        titulo: inputTitulo.value,
+        dificuldade: inputDificuldade.value,
+        ingredientes: inputIngredientes.value.split(','),
+        preparo: inputPreparo.value,
+        link: inputLink.value,
+        //vagano: inputVegano.value ? inputVegano: "não"
     }
-    //exibir receitas js
-function exibirReceitasJs() {
+    console.log(novaReceita);
+    listaDeReceitas.push(novaReceita);
+
+    exibirReceitas()
+}
+
+//exibir receitas js
+function exibirReceitas() {
     let htmlReceitas = '';
 
     for (let index = 0; index < listaDeReceitas.length; index++) {
@@ -181,4 +184,4 @@ function exibirReceitasJs() {
 
     painelReceitas.innerHTML = htmlReceitas;
 }
-exibirReceitasJs()
+exibirReceitas()

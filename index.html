@@ -25,12 +25,13 @@
                 <br>
                 <label for="dificuldade">Dificuldade</label>
                 <select name="dificuldade " id="dificuldade">
-                   <option value="simples">simples</option>
+                   <option value="simples" selected>simples</option>
                    <option value="medio">medio</option>
                    <option value="dificil">dificil</option>
                    <option value="chef">chef</option>
                 </select>
                 <label for="ingredientes">ingredientes</label>
+                <small>Adicione os ingredientes separados por virgula (Exemplo: açucar, sal, leite</small>
                 <textarea name="ingredientes" id="ingredientes"></textarea>
                 <br>
                 <label for="preparo">prepraro</label>
@@ -40,9 +41,11 @@
                 <input type="text" name=" link" id="link">
                 <br>
                 <label for="vegano">vegano</label>
-                <label for="vegano-true"></label>
-                <input type="radio" id="vegano-true" name="vegano" value="sim"> sim
+                <label for="vegano-true">
+                    <input type="radio" id="vegano-true" name="vegano" value="sim"> sim
                 </label>
+
+                <!--</label>-->
                 <label for="vegano-false">
                 <input type="radio" id="vegano-false" name="vegano" value="não" checked>
                 não
